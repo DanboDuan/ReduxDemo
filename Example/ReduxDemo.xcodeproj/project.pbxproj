@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAECA40C0B89FD0746FDF2EF /* libPods-ReduxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */; };
+		C44030502204923B00C5AE5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C440304F2204923B00C5AE5E /* AppDelegate.m */; };
+		C44030532204923B00C5AE5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44030522204923B00C5AE5E /* ViewController.m */; };
+		C44030562204923B00C5AE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44030542204923B00C5AE5E /* Main.storyboard */; };
+		C44030582204923C00C5AE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44030572204923C00C5AE5E /* Assets.xcassets */; };
+		C440305B2204923C00C5AE5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44030592204923C00C5AE5E /* LaunchScreen.storyboard */; };
+		C440305E2204923C00C5AE5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C440305D2204923C00C5AE5E /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C440304B2204923B00C5AE5E /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C440304E2204923B00C5AE5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C440304F2204923B00C5AE5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C44030512204923B00C5AE5E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C44030522204923B00C5AE5E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C44030552204923B00C5AE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C44030572204923C00C5AE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C440305A2204923C00C5AE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C440305C2204923C00C5AE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C440305D2204923C00C5AE5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C44030482204923B00C5AE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAECA40C0B89FD0746FDF2EF /* libPods-ReduxDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C44030422204923B00C5AE5E = {
+			isa = PBXGroup;
+			children = (
+				C440304D2204923B00C5AE5E /* ReduxDemo */,
+				C440304C2204923B00C5AE5E /* Products */,
+				D91DD1159CE800F77788FE2D /* Pods */,
+				FF037CDE8973429D98EC6FA4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C440304C2204923B00C5AE5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C440304B2204923B00C5AE5E /* ReduxDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C440304D2204923B00C5AE5E /* ReduxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C440304E2204923B00C5AE5E /* AppDelegate.h */,
+				C440304F2204923B00C5AE5E /* AppDelegate.m */,
+				C44030512204923B00C5AE5E /* ViewController.h */,
+				C44030522204923B00C5AE5E /* ViewController.m */,
+				C44030542204923B00C5AE5E /* Main.storyboard */,
+				C44030572204923C00C5AE5E /* Assets.xcassets */,
+				C44030592204923C00C5AE5E /* LaunchScreen.storyboard */,
+				C440305C2204923C00C5AE5E /* Info.plist */,
+				C440305D2204923C00C5AE5E /* main.m */,
+			);
+			path = ReduxDemo;
+			sourceTree = "<group>";
+		};
+		D91DD1159CE800F77788FE2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */,
+				AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF037CDE8973429D98EC6FA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C440304A2204923B00C5AE5E /* ReduxDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44030612204923C00C5AE5E /* Build configuration list for PBXNativeTarget "ReduxDemo" */;
+			buildPhases = (
+				FB281328EBB5287011EAD731 /* [CP] Check Pods Manifest.lock */,
+				C44030472204923B00C5AE5E /* Sources */,
+				C44030482204923B00C5AE5E /* Frameworks */,
+				C44030492204923B00C5AE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReduxDemo;
+			productName = ReduxDemo;
+			productReference = C440304B2204923B00C5AE5E /* ReduxDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C44030432204923B00C5AE5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = bob;
+				TargetAttributes = {
+					C440304A2204923B00C5AE5E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C44030462204923B00C5AE5E /* Build configuration list for PBXProject "ReduxDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C44030422204923B00C5AE5E;
+			productRefGroup = C440304C2204923B00C5AE5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C440304A2204923B00C5AE5E /* ReduxDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C44030492204923B00C5AE5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C440305B2204923C00C5AE5E /* LaunchScreen.storyboard in Resources */,
+				C44030582204923C00C5AE5E /* Assets.xcassets in Resources */,
+				C44030562204923B00C5AE5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB281328EBB5287011EAD731 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C44030472204923B00C5AE5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C44030532204923B00C5AE5E /* ViewController.m in Sources */,
+				C440305E2204923C00C5AE5E /* main.m in Sources */,
+				C44030502204923B00C5AE5E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C44030542204923B00C5AE5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C44030552204923B00C5AE5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C44030592204923C00C5AE5E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C440305A2204923C00C5AE5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C440305F2204923C00C5AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C44030602204923C00C5AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C44030622204923C00C5AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ReduxDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C44030632204923C00C5AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ReduxDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C44030462204923B00C5AE5E /* Build configuration list for PBXProject "ReduxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C440305F2204923C00C5AE5E /* Debug */,
+				C44030602204923C00C5AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C44030612204923C00C5AE5E /* Build configuration list for PBXNativeTarget "ReduxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44030622204923C00C5AE5E /* Debug */,
+				C44030632204923C00C5AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C44030432204923B00C5AE5E /* Project object */;
+}
