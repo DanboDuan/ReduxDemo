@@ -7,105 +7,182 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BAECA40C0B89FD0746FDF2EF /* libPods-ReduxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */; };
-		C44030502204923B00C5AE5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C440304F2204923B00C5AE5E /* AppDelegate.m */; };
-		C44030532204923B00C5AE5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C44030522204923B00C5AE5E /* ViewController.m */; };
-		C44030562204923B00C5AE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44030542204923B00C5AE5E /* Main.storyboard */; };
-		C44030582204923C00C5AE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44030572204923C00C5AE5E /* Assets.xcassets */; };
-		C440305B2204923C00C5AE5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44030592204923C00C5AE5E /* LaunchScreen.storyboard */; };
-		C440305E2204923C00C5AE5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C440305D2204923C00C5AE5E /* main.m */; };
+		1BB1EF5E184C6E9F73263B97 /* libPods-ReduxDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5612F326B4DBCE756B765728 /* libPods-ReduxDemoTests.a */; };
+		2BC2465BBCCA1A65D0DF09F1 /* libPods-ReduxDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FCE2C94D4EB79F4FFDE6C5 /* libPods-ReduxDemoUITests.a */; };
+		A587DEF236CE0AB32650EBB9 /* libPods-ReduxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C55305D7A8E5A2CC791905 /* libPods-ReduxDemo.a */; };
+		C4168FFF22262433007859EF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4168FFE22262433007859EF /* DemoViewController.m */; };
+		C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43A12211C4880082F312 /* AppDelegate.m */; };
+		C4AC43A82211C4880082F312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A62211C4880082F312 /* Main.storyboard */; };
+		C4AC43AA2211C4890082F312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A92211C4890082F312 /* Assets.xcassets */; };
+		C4AC43AD2211C4890082F312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43AB2211C4890082F312 /* LaunchScreen.storyboard */; };
+		C4AC43B02211C4890082F312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43AF2211C4890082F312 /* main.m */; };
+		C4AC43BA2211C4890082F312 /* ReduxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43B92211C4890082F312 /* ReduxDemoTests.m */; };
+		C4AC43C52211C4890082F312 /* ReduxDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43C42211C4890082F312 /* ReduxDemoUITests.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C4AC43B62211C4890082F312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AC43952211C4880082F312 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4AC439C2211C4880082F312;
+			remoteInfo = ReduxDemo;
+		};
+		C4AC43C12211C4890082F312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AC43952211C4880082F312 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4AC439C2211C4880082F312;
+			remoteInfo = ReduxDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.release.xcconfig"; sourceTree = "<group>"; };
-		BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C440304B2204923B00C5AE5E /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C440304E2204923B00C5AE5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C440304F2204923B00C5AE5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C44030512204923B00C5AE5E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C44030522204923B00C5AE5E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C44030552204923B00C5AE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C44030572204923C00C5AE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C440305A2204923C00C5AE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C440305C2204923C00C5AE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C440305D2204923C00C5AE5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12274FD0B56ECBE240D01777 /* Pods-ReduxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		29FCE2C94D4EB79F4FFDE6C5 /* libPods-ReduxDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EC289240C0F133349FFB50 /* Pods-ReduxDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoTests/Pods-ReduxDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5612F326B4DBCE756B765728 /* libPods-ReduxDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F26DBE439CBC26D5FDA2CEE /* Pods-ReduxDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoUITests/Pods-ReduxDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9DA8F31D87DC861B7367BB7D /* Pods-ReduxDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoTests/Pods-ReduxDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4168FFD22262433007859EF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		C4168FFE22262433007859EF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		C4AC439D2211C4880082F312 /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AC43A02211C4880082F312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4AC43A12211C4880082F312 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4AC43A72211C4880082F312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4AC43A92211C4890082F312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4AC43AC2211C4890082F312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4AC43AE2211C4890082F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4AC43AF2211C4890082F312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4AC43B52211C4890082F312 /* ReduxDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AC43B92211C4890082F312 /* ReduxDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReduxDemoTests.m; sourceTree = "<group>"; };
+		C4AC43BB2211C4890082F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4AC43C02211C4890082F312 /* ReduxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AC43C42211C4890082F312 /* ReduxDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReduxDemoUITests.m; sourceTree = "<group>"; };
+		C4AC43C62211C4890082F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A73DB10DEA634BBF2EFEED /* Pods-ReduxDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoUITests/Pods-ReduxDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D7C55305D7A8E5A2CC791905 /* libPods-ReduxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF94E2499087D65EAD09A3F4 /* Pods-ReduxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C44030482204923B00C5AE5E /* Frameworks */ = {
+		C4AC439A2211C4880082F312 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAECA40C0B89FD0746FDF2EF /* libPods-ReduxDemo.a in Frameworks */,
+				A587DEF236CE0AB32650EBB9 /* libPods-ReduxDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43B22211C4890082F312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB1EF5E184C6E9F73263B97 /* libPods-ReduxDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43BD2211C4890082F312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC2465BBCCA1A65D0DF09F1 /* libPods-ReduxDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C44030422204923B00C5AE5E = {
+		3851037CE231922C3C605792 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C440304D2204923B00C5AE5E /* ReduxDemo */,
-				C440304C2204923B00C5AE5E /* Products */,
-				D91DD1159CE800F77788FE2D /* Pods */,
-				FF037CDE8973429D98EC6FA4 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		C440304C2204923B00C5AE5E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C440304B2204923B00C5AE5E /* ReduxDemo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C440304D2204923B00C5AE5E /* ReduxDemo */ = {
-			isa = PBXGroup;
-			children = (
-				C440304E2204923B00C5AE5E /* AppDelegate.h */,
-				C440304F2204923B00C5AE5E /* AppDelegate.m */,
-				C44030512204923B00C5AE5E /* ViewController.h */,
-				C44030522204923B00C5AE5E /* ViewController.m */,
-				C44030542204923B00C5AE5E /* Main.storyboard */,
-				C44030572204923C00C5AE5E /* Assets.xcassets */,
-				C44030592204923C00C5AE5E /* LaunchScreen.storyboard */,
-				C440305C2204923C00C5AE5E /* Info.plist */,
-				C440305D2204923C00C5AE5E /* main.m */,
-			);
-			path = ReduxDemo;
-			sourceTree = "<group>";
-		};
-		D91DD1159CE800F77788FE2D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */,
-				AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */,
+				12274FD0B56ECBE240D01777 /* Pods-ReduxDemo.debug.xcconfig */,
+				EF94E2499087D65EAD09A3F4 /* Pods-ReduxDemo.release.xcconfig */,
+				44EC289240C0F133349FFB50 /* Pods-ReduxDemoTests.debug.xcconfig */,
+				9DA8F31D87DC861B7367BB7D /* Pods-ReduxDemoTests.release.xcconfig */,
+				5F26DBE439CBC26D5FDA2CEE /* Pods-ReduxDemoUITests.debug.xcconfig */,
+				D3A73DB10DEA634BBF2EFEED /* Pods-ReduxDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FF037CDE8973429D98EC6FA4 /* Frameworks */ = {
+		AD28BA5DF2BF09AE54563E44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBD89615A7973A0EFF548DFB /* libPods-ReduxDemo.a */,
+				D7C55305D7A8E5A2CC791905 /* libPods-ReduxDemo.a */,
+				5612F326B4DBCE756B765728 /* libPods-ReduxDemoTests.a */,
+				29FCE2C94D4EB79F4FFDE6C5 /* libPods-ReduxDemoUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4AC43942211C4880082F312 = {
+			isa = PBXGroup;
+			children = (
+				C4AC439F2211C4880082F312 /* ReduxDemo */,
+				C4AC43B82211C4890082F312 /* ReduxDemoTests */,
+				C4AC43C32211C4890082F312 /* ReduxDemoUITests */,
+				C4AC439E2211C4880082F312 /* Products */,
+				3851037CE231922C3C605792 /* Pods */,
+				AD28BA5DF2BF09AE54563E44 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4AC439E2211C4880082F312 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC439D2211C4880082F312 /* ReduxDemo.app */,
+				C4AC43B52211C4890082F312 /* ReduxDemoTests.xctest */,
+				C4AC43C02211C4890082F312 /* ReduxDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4AC439F2211C4880082F312 /* ReduxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4168FFD22262433007859EF /* DemoViewController.h */,
+				C4168FFE22262433007859EF /* DemoViewController.m */,
+				C4AC43A02211C4880082F312 /* AppDelegate.h */,
+				C4AC43A12211C4880082F312 /* AppDelegate.m */,
+				C4AC43A62211C4880082F312 /* Main.storyboard */,
+				C4AC43A92211C4890082F312 /* Assets.xcassets */,
+				C4AC43AB2211C4890082F312 /* LaunchScreen.storyboard */,
+				C4AC43AE2211C4890082F312 /* Info.plist */,
+				C4AC43AF2211C4890082F312 /* main.m */,
+			);
+			path = ReduxDemo;
+			sourceTree = "<group>";
+		};
+		C4AC43B82211C4890082F312 /* ReduxDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC43B92211C4890082F312 /* ReduxDemoTests.m */,
+				C4AC43BB2211C4890082F312 /* Info.plist */,
+			);
+			path = ReduxDemoTests;
+			sourceTree = "<group>";
+		};
+		C4AC43C32211C4890082F312 /* ReduxDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC43C42211C4890082F312 /* ReduxDemoUITests.m */,
+				C4AC43C62211C4890082F312 /* Info.plist */,
+			);
+			path = ReduxDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C440304A2204923B00C5AE5E /* ReduxDemo */ = {
+		C4AC439C2211C4880082F312 /* ReduxDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C44030612204923C00C5AE5E /* Build configuration list for PBXNativeTarget "ReduxDemo" */;
+			buildConfigurationList = C4AC43C92211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemo" */;
 			buildPhases = (
-				FB281328EBB5287011EAD731 /* [CP] Check Pods Manifest.lock */,
-				C44030472204923B00C5AE5E /* Sources */,
-				C44030482204923B00C5AE5E /* Frameworks */,
-				C44030492204923B00C5AE5E /* Resources */,
+				2E7F02074370DF58A740178D /* [CP] Check Pods Manifest.lock */,
+				C4AC43992211C4880082F312 /* Sources */,
+				C4AC439A2211C4880082F312 /* Frameworks */,
+				C4AC439B2211C4880082F312 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -113,24 +190,70 @@
 			);
 			name = ReduxDemo;
 			productName = ReduxDemo;
-			productReference = C440304B2204923B00C5AE5E /* ReduxDemo.app */;
+			productReference = C4AC439D2211C4880082F312 /* ReduxDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C4AC43B42211C4890082F312 /* ReduxDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AC43CC2211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemoTests" */;
+			buildPhases = (
+				7FC8EA0A2BC241C870AA8AD4 /* [CP] Check Pods Manifest.lock */,
+				C4AC43B12211C4890082F312 /* Sources */,
+				C4AC43B22211C4890082F312 /* Frameworks */,
+				C4AC43B32211C4890082F312 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4AC43B72211C4890082F312 /* PBXTargetDependency */,
+			);
+			name = ReduxDemoTests;
+			productName = ReduxDemoTests;
+			productReference = C4AC43B52211C4890082F312 /* ReduxDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4AC43BF2211C4890082F312 /* ReduxDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4AC43CF2211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemoUITests" */;
+			buildPhases = (
+				EB3283C8CD078909B3831FA6 /* [CP] Check Pods Manifest.lock */,
+				C4AC43BC2211C4890082F312 /* Sources */,
+				C4AC43BD2211C4890082F312 /* Frameworks */,
+				C4AC43BE2211C4890082F312 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4AC43C22211C4890082F312 /* PBXTargetDependency */,
+			);
+			name = ReduxDemoUITests;
+			productName = ReduxDemoUITests;
+			productReference = C4AC43C02211C4890082F312 /* ReduxDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C44030432204923B00C5AE5E /* Project object */ = {
+		C4AC43952211C4880082F312 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = bob;
 				TargetAttributes = {
-					C440304A2204923B00C5AE5E = {
+					C4AC439C2211C4880082F312 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					C4AC43B42211C4890082F312 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4AC439C2211C4880082F312;
+					};
+					C4AC43BF2211C4890082F312 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4AC439C2211C4880082F312;
 					};
 				};
 			};
-			buildConfigurationList = C44030462204923B00C5AE5E /* Build configuration list for PBXProject "ReduxDemo" */;
+			buildConfigurationList = C4AC43982211C4880082F312 /* Build configuration list for PBXProject "ReduxDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,31 +261,47 @@
 				en,
 				Base,
 			);
-			mainGroup = C44030422204923B00C5AE5E;
-			productRefGroup = C440304C2204923B00C5AE5E /* Products */;
+			mainGroup = C4AC43942211C4880082F312;
+			productRefGroup = C4AC439E2211C4880082F312 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C440304A2204923B00C5AE5E /* ReduxDemo */,
+				C4AC439C2211C4880082F312 /* ReduxDemo */,
+				C4AC43B42211C4890082F312 /* ReduxDemoTests */,
+				C4AC43BF2211C4890082F312 /* ReduxDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C44030492204923B00C5AE5E /* Resources */ = {
+		C4AC439B2211C4880082F312 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C440305B2204923C00C5AE5E /* LaunchScreen.storyboard in Resources */,
-				C44030582204923C00C5AE5E /* Assets.xcassets in Resources */,
-				C44030562204923B00C5AE5E /* Main.storyboard in Resources */,
+				C4AC43AD2211C4890082F312 /* LaunchScreen.storyboard in Resources */,
+				C4AC43AA2211C4890082F312 /* Assets.xcassets in Resources */,
+				C4AC43A82211C4880082F312 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43B32211C4890082F312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43BE2211C4890082F312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FB281328EBB5287011EAD731 /* [CP] Check Pods Manifest.lock */ = {
+		2E7F02074370DF58A740178D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,34 +323,107 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7FC8EA0A2BC241C870AA8AD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB3283C8CD078909B3831FA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C44030472204923B00C5AE5E /* Sources */ = {
+		C4AC43992211C4880082F312 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C44030532204923B00C5AE5E /* ViewController.m in Sources */,
-				C440305E2204923C00C5AE5E /* main.m in Sources */,
-				C44030502204923B00C5AE5E /* AppDelegate.m in Sources */,
+				C4AC43B02211C4890082F312 /* main.m in Sources */,
+				C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */,
+				C4168FFF22262433007859EF /* DemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43B12211C4890082F312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AC43BA2211C4890082F312 /* ReduxDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4AC43BC2211C4890082F312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AC43C52211C4890082F312 /* ReduxDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C4AC43B72211C4890082F312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4AC439C2211C4880082F312 /* ReduxDemo */;
+			targetProxy = C4AC43B62211C4890082F312 /* PBXContainerItemProxy */;
+		};
+		C4AC43C22211C4890082F312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4AC439C2211C4880082F312 /* ReduxDemo */;
+			targetProxy = C4AC43C12211C4890082F312 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		C44030542204923B00C5AE5E /* Main.storyboard */ = {
+		C4AC43A62211C4880082F312 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C44030552204923B00C5AE5E /* Base */,
+				C4AC43A72211C4880082F312 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C44030592204923C00C5AE5E /* LaunchScreen.storyboard */ = {
+		C4AC43AB2211C4890082F312 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C440305A2204923C00C5AE5E /* Base */,
+				C4AC43AC2211C4890082F312 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -219,7 +431,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C440305F2204923C00C5AE5E /* Debug */ = {
+		C4AC43C72211C4890082F312 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,7 +490,7 @@
 			};
 			name = Debug;
 		};
-		C44030602204923C00C5AE5E /* Release */ = {
+		C4AC43C82211C4890082F312 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,12 +543,13 @@
 			};
 			name = Release;
 		};
-		C44030622204923C00C5AE5E /* Debug */ = {
+		C4AC43CA2211C4890082F312 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C4B9155BE24A2DC06BF243A /* Pods-ReduxDemo.debug.xcconfig */;
+			baseConfigurationReference = 12274FD0B56ECBE240D01777 /* Pods-ReduxDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
 				INFOPLIST_FILE = ReduxDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,12 +561,13 @@
 			};
 			name = Debug;
 		};
-		C44030632204923C00C5AE5E /* Release */ = {
+		C4AC43CB2211C4890082F312 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA991B85E5BCB11AD496B8A0 /* Pods-ReduxDemo.release.xcconfig */;
+			baseConfigurationReference = EF94E2499087D65EAD09A3F4 /* Pods-ReduxDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
 				INFOPLIST_FILE = ReduxDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,28 +579,124 @@
 			};
 			name = Release;
 		};
+		C4AC43CD2211C4890082F312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EC289240C0F133349FFB50 /* Pods-ReduxDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
+				INFOPLIST_FILE = ReduxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxDemo.app/ReduxDemo";
+			};
+			name = Debug;
+		};
+		C4AC43CE2211C4890082F312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA8F31D87DC861B7367BB7D /* Pods-ReduxDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
+				INFOPLIST_FILE = ReduxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxDemo.app/ReduxDemo";
+			};
+			name = Release;
+		};
+		C4AC43D02211C4890082F312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F26DBE439CBC26D5FDA2CEE /* Pods-ReduxDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
+				INFOPLIST_FILE = ReduxDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxDemo;
+			};
+			name = Debug;
+		};
+		C4AC43D12211C4890082F312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A73DB10DEA634BBF2EFEED /* Pods-ReduxDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UA524KP7L9;
+				INFOPLIST_FILE = ReduxDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C44030462204923B00C5AE5E /* Build configuration list for PBXProject "ReduxDemo" */ = {
+		C4AC43982211C4880082F312 /* Build configuration list for PBXProject "ReduxDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C440305F2204923C00C5AE5E /* Debug */,
-				C44030602204923C00C5AE5E /* Release */,
+				C4AC43C72211C4890082F312 /* Debug */,
+				C4AC43C82211C4890082F312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C44030612204923C00C5AE5E /* Build configuration list for PBXNativeTarget "ReduxDemo" */ = {
+		C4AC43C92211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C44030622204923C00C5AE5E /* Debug */,
-				C44030632204923C00C5AE5E /* Release */,
+				C4AC43CA2211C4890082F312 /* Debug */,
+				C4AC43CB2211C4890082F312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AC43CC2211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AC43CD2211C4890082F312 /* Debug */,
+				C4AC43CE2211C4890082F312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AC43CF2211C4890082F312 /* Build configuration list for PBXNativeTarget "ReduxDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4AC43D02211C4890082F312 /* Debug */,
+				C4AC43D12211C4890082F312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C44030432204923B00C5AE5E /* Project object */;
+	rootObject = C4AC43952211C4880082F312 /* Project object */;
 }

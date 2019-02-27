@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'ReduxDemo'
+  s.name             = 'Redux'
   s.version          = '0.1.0'
   s.summary          = 'test'
 
@@ -28,6 +28,6 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ReduxOC/**/*'
-  s.public_header_files = 'ReduxOC/**/*.h'
+  s.source_files = 'Redux/**/*'
+  s.public_header_files = 'Redux/CoreTypes/*.h'
 end

@@ -3,5 +3,13 @@
 platform :ios, '8.0'
 
 target 'ReduxDemo' do
-  pod 'ReduxDemo', :path => '../'
+  pod 'Redux', :path => '../'
+  
+  target 'ReduxDemoTests' do
+      inherit! :search_paths
+  end
+
+  target 'ReduxDemoUITests' do
+      inherit! :search_paths
+  end
 end
