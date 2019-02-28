@@ -32,15 +32,13 @@ static NSArray *testFeedList() {
         FeedModel *model = [FeedModel new];
         model.title = @"Test Counter";
         model.actionVCName = @"CounterViewController";
-        model.actionVC = 2;
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test 2";
-        model.actionVCName = @"CounterViewController";
-        model.actionVC = 2;
+        model.title = @"Test ComplexCounter";
+        model.actionVCName = @"ComplexCounterViewController";
         model;
     })];
 

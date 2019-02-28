@@ -16,6 +16,9 @@
 		C41690222227800C007859EF /* CounterAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C41690212227800C007859EF /* CounterAction.m */; };
 		C4169025222780D8007859EF /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4169024222780D8007859EF /* CounterViewController.m */; };
 		C416902C22278AAE007859EF /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C416902B22278AAE007859EF /* Logger.m */; };
+		C41690342227BCCD007859EF /* ComplexCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41690332227BCCD007859EF /* ComplexCounterViewController.m */; };
+		C41690382227BD38007859EF /* ComplexState.m in Sources */ = {isa = PBXBuildFile; fileRef = C41690372227BD38007859EF /* ComplexState.m */; };
+		C416903C2227BECA007859EF /* ComplexReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = C416903B2227BECA007859EF /* ComplexReducer.m */; };
 		C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43A12211C4880082F312 /* AppDelegate.m */; };
 		C4AC43A82211C4880082F312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A62211C4880082F312 /* Main.storyboard */; };
 		C4AC43AA2211C4890082F312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A92211C4890082F312 /* Assets.xcassets */; };
@@ -61,6 +64,12 @@
 		C4169024222780D8007859EF /* CounterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
 		C416902A22278AAE007859EF /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		C416902B22278AAE007859EF /* Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		C41690322227BCCD007859EF /* ComplexCounterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexCounterViewController.h; sourceTree = "<group>"; };
+		C41690332227BCCD007859EF /* ComplexCounterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplexCounterViewController.m; sourceTree = "<group>"; };
+		C41690362227BD38007859EF /* ComplexState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexState.h; sourceTree = "<group>"; };
+		C41690372227BD38007859EF /* ComplexState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplexState.m; sourceTree = "<group>"; };
+		C416903A2227BECA007859EF /* ComplexReducer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplexReducer.h; sourceTree = "<group>"; };
+		C416903B2227BECA007859EF /* ComplexReducer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplexReducer.m; sourceTree = "<group>"; };
 		C4AC439D2211C4880082F312 /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AC43A02211C4880082F312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4AC43A12211C4880082F312 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,7 +143,6 @@
 		C416901922277DCA007859EF /* CounterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C416902922278A94007859EF /* Middlewares */,
 				C416902822278140007859EF /* Reducer */,
 				C4169027222780ED007859EF /* Action */,
 				C4169026222780E3007859EF /* State */,
@@ -180,6 +188,35 @@
 			path = Middlewares;
 			sourceTree = "<group>";
 		};
+		C41690312227BC9E007859EF /* ComplexCounterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C41690392227BEB6007859EF /* Reducer */,
+				C41690352227BD1A007859EF /* State */,
+				C41690322227BCCD007859EF /* ComplexCounterViewController.h */,
+				C41690332227BCCD007859EF /* ComplexCounterViewController.m */,
+			);
+			path = ComplexCounterDemo;
+			sourceTree = "<group>";
+		};
+		C41690352227BD1A007859EF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				C41690362227BD38007859EF /* ComplexState.h */,
+				C41690372227BD38007859EF /* ComplexState.m */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		C41690392227BEB6007859EF /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				C416903A2227BECA007859EF /* ComplexReducer.h */,
+				C416903B2227BECA007859EF /* ComplexReducer.m */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
 		C4AC43942211C4880082F312 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +242,8 @@
 		C4AC439F2211C4880082F312 /* ReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C416902922278A94007859EF /* Middlewares */,
+				C41690312227BC9E007859EF /* ComplexCounterDemo */,
 				C416901922277DCA007859EF /* CounterDemo */,
 				C4168FFD22262433007859EF /* DemoViewController.h */,
 				C4168FFE22262433007859EF /* DemoViewController.m */,
@@ -440,13 +479,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4169025222780D8007859EF /* CounterViewController.m in Sources */,
+				C41690342227BCCD007859EF /* ComplexCounterViewController.m in Sources */,
 				C4AC43B02211C4890082F312 /* main.m in Sources */,
 				C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */,
 				C416902C22278AAE007859EF /* Logger.m in Sources */,
 				C416901C22277E89007859EF /* CounterState.m in Sources */,
+				C41690382227BD38007859EF /* ComplexState.m in Sources */,
 				C416901F22277FA9007859EF /* CounterReducer.m in Sources */,
 				C41690222227800C007859EF /* CounterAction.m in Sources */,
 				C4168FFF22262433007859EF /* DemoViewController.m in Sources */,
+				C416903C2227BECA007859EF /* ComplexReducer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
