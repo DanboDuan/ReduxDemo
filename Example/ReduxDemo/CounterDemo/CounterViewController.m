@@ -101,6 +101,10 @@
     [self.store subscribe:self];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.store unsubscribe:self];
+}
+
 - (void)updateState:(CounterState *)state {
     self.presenter.text = [NSString stringWithFormat:@"%zd",state.number];
 }
