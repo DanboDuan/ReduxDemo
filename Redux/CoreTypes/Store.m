@@ -13,12 +13,6 @@
 #import "ReduxMacro.h"
 #import "NSArray+Redux.h"
 
-
-@interface InitAction : NSObject <Action>
-@end
-@implementation InitAction
-@end
-
 @interface Store<__covariant StateType:id<State>> ()
 
 @property (nonatomic, strong) StateType state;
@@ -45,7 +39,9 @@
 - (instancetype)initWithReducer:(Reducer)rootReducer
                           state:(nullable id<State>)rootState
                     middlewares:(NSArray<Middleware> *)middlewares {
-    return [self initWithReducer:rootReducer state:rootState middlewares:middlewares autoSkipRepeats:YES];
+    BOOL autoSkipRepeats = rootState ? [rootState respondsToSelector:@selector(isEqualToState:)] : NO;
+
+    return [self initWithReducer:rootReducer state:rootState middlewares:middlewares autoSkipRepeats:autoSkipRepeats];
 }
 
 - (instancetype)initWithReducer:(Reducer)rootReducer

@@ -9,3 +9,8 @@
 
 @protocol Action <NSObject>
 @end
+
+@interface InitAction : NSObject <Action>
+@end
+
+
