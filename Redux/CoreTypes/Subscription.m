@@ -41,7 +41,7 @@
         };
     };
 
-    return [self initWithSink:sink];
+    return [[[self class] alloc] initWithSink:sink];
 }
 
 - (instancetype)skipRepeats:(BOOL (^)(id, id))isRepeat {
@@ -57,7 +57,7 @@
         };
     };
 
-    return [self initWithSink:sink];
+    return [[[self class] alloc] initWithSink:sink];
 }
 
 - (instancetype)skip:(BOOL (^)(id, id))when {
