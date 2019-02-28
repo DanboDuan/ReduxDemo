@@ -37,8 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)subscribe:(id<Subscriber>)subscriber;
 
-- (void)subscribe:(id<Subscriber>)subscriber
-    withTransform:(Subscription * (^)(Subscription * original))transform;
+- (void)subscribe:(id<Subscriber>)subscriber withTransform:(nullable SubscriptionTransForm *)transform;
 
 - (void)unsubscribe:(id<Subscriber>)subscriber;
 
@@ -66,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)subscribe:(id<Subscriber>)subscriber;
 
-- (void)subscribe:(id<Subscriber>)subscriber withTransform:(SubscriptionTransForm *)transform;
+- (void)subscribe:(id<Subscriber>)subscriber withTransform:(nullable SubscriptionTransForm<StateType, id> *)transform;
 
 - (void)unsubscribe:(id<Subscriber>)subscriber;
 

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void (^observer)(StateType oldState, StateType updatedState);
 
-- (void)updateValues:(StateType)oldState with:(StateType)updatedState;
+- (void)updateValues:(nullable StateType)oldState with:(nullable StateType)updatedState;
 
 - (instancetype)skipRepeats:(BOOL (^)(StateType oldState, StateType updatedState))isRepeat;
 - (instancetype)skip:(BOOL (^)(StateType oldState, StateType updatedState))when;
@@ -24,11 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SubscriptionTransForm<__covariant StateType,__covariant TransFormType>: NSObject
 
+- (instancetype)initWith:(Subscription * (^)(Subscription *subscription))transForm;
+
 - (Subscription<TransFormType> *)select:(Subscription<StateType> *)before
                                    with:(TransFormType (^)(StateType state))selector;
 
-- (Subscription<TransFormType> *)transForm:(Subscription<StateType> *)before
-                                      with:(Subscription * (^)(Subscription *subscription))transForm;
+- (Subscription<TransFormType> *)transForm:(Subscription<StateType> *)before;
 
 @end
 

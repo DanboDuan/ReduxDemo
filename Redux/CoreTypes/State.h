@@ -9,4 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol State <NSObject>
+
+@optional
+- (BOOL)isEqualToState:(nullable id<State>)object;
+
 @end

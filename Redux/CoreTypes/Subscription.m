@@ -75,9 +75,20 @@
 
 @interface SubscriptionTransForm<__covariant StateType,__covariant TransFormType>()
 
+@property (nonatomic, copy) Subscription * (^transForm)(Subscription *subscription);
+
 @end
 
 @implementation SubscriptionTransForm
+
+- (instancetype)initWith:(Subscription * (^)(Subscription *subscription))transForm {
+    self = [super init];
+    if (self) {
+        self.transForm = transForm;
+    }
+
+    return self;
+}
 
 - (Subscription *)select:(Subscription *)before
                     with:(id (^)(id))selector {
@@ -85,10 +96,8 @@
     return [before select:selector];
 }
 
-- (Subscription *)transForm:(Subscription *)before
-                       with:(Subscription * (^)(Subscription * subscription))transForm {
-
-    return transForm(before);
+- (Subscription *)transForm:(Subscription *)before {
+    return self.transForm(before);
 }
 
 @end

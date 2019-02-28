@@ -14,5 +14,6 @@
 #import "Subscriber.h"
 #import "Subscription.h"
 #import "Store.h"
+#import "Middleware.h"
 
 #endif /* Redux_h */

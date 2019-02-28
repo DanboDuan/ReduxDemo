@@ -11,6 +11,7 @@
 		2BC2465BBCCA1A65D0DF09F1 /* libPods-ReduxDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FCE2C94D4EB79F4FFDE6C5 /* libPods-ReduxDemoUITests.a */; };
 		A587DEF236CE0AB32650EBB9 /* libPods-ReduxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C55305D7A8E5A2CC791905 /* libPods-ReduxDemo.a */; };
 		C4168FFF22262433007859EF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4168FFE22262433007859EF /* DemoViewController.m */; };
+		C416901C22277E89007859EF /* CounterState.m in Sources */ = {isa = PBXBuildFile; fileRef = C416901B22277E89007859EF /* CounterState.m */; };
 		C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43A12211C4880082F312 /* AppDelegate.m */; };
 		C4AC43A82211C4880082F312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A62211C4880082F312 /* Main.storyboard */; };
 		C4AC43AA2211C4890082F312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A92211C4890082F312 /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		9DA8F31D87DC861B7367BB7D /* Pods-ReduxDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoTests/Pods-ReduxDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4168FFD22262433007859EF /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		C4168FFE22262433007859EF /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		C416901A22277E89007859EF /* CounterState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterState.h; sourceTree = "<group>"; };
+		C416901B22277E89007859EF /* CounterState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterState.m; sourceTree = "<group>"; };
 		C4AC439D2211C4880082F312 /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AC43A02211C4880082F312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4AC43A12211C4880082F312 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +119,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C416901922277DCA007859EF /* CounterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C416901A22277E89007859EF /* CounterState.h */,
+				C416901B22277E89007859EF /* CounterState.m */,
+			);
+			path = CounterDemo;
+			sourceTree = "<group>";
+		};
 		C4AC43942211C4880082F312 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		C4AC439F2211C4880082F312 /* ReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C416901922277DCA007859EF /* CounterDemo */,
 				C4168FFD22262433007859EF /* DemoViewController.h */,
 				C4168FFE22262433007859EF /* DemoViewController.m */,
 				C4AC43A02211C4880082F312 /* AppDelegate.h */,
@@ -376,6 +389,7 @@
 			files = (
 				C4AC43B02211C4890082F312 /* main.m in Sources */,
 				C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */,
+				C416901C22277E89007859EF /* CounterState.m in Sources */,
 				C4168FFF22262433007859EF /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
