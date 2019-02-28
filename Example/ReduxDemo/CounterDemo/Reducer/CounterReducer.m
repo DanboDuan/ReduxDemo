@@ -11,6 +11,8 @@
 #import "CounterAction.h"
 
 Reducer CounterReducer = ^CounterState * (id<Action> action, CounterState *state) {
+    // should handler initAction with nil state?
+    
     if ([state isKindOfClass:[CounterState class]]) {
         
         if ([action isKindOfClass:[CounterIncrAction class]]) {

@@ -28,8 +28,10 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        CounterState *state =[CounterState stateWithNumber:12];
-        self.store = [[Store alloc] initWithReducer:CounterReducer state:state middlewares:@[ActionLogger, StateLogger]];
+        self.store = [[Store alloc] initWithReducer:CounterReducer
+                                              state:[CounterState stateWithNumber:12]
+                                        middlewares:@[ActionLogger, StateLogger] /*autoSkipRepeats:NO*/];
+        // if autoSkipRepeats NO, the same number with state will repeatly callback
     }
     return self;
 }

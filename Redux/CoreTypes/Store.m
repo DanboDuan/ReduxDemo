@@ -68,7 +68,7 @@
                 [self dispatch:action];
             };
             GetState getState = ^id<State>() {
-                 ReduxStrongSelf;
+                ReduxStrongSelf;
                 return self.state;
             };
             
