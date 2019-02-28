@@ -158,7 +158,7 @@
 }
 
 - (void)dispatch:(id<Action>)action {
-
+    self.dispatchFunction(action);
 }
 
 

@@ -35,16 +35,17 @@
 
 - (instancetype)select:(id (^)(id))selector {
 
-    return [self initWithSink:^(void (^block)(id, id)) {
+    void (^sink)(void (^block)(id, id)) =  ^(void (^block)(id, id)){
         self.observer = ^(id oldState, id updatedState) {
             block(selector(oldState), selector(updatedState));
         };
-    }];
+    };
+
+    return [self initWithSink:sink];
 }
 
 - (instancetype)skipRepeats:(BOOL (^)(id, id))isRepeat {
-
-    return [self initWithSink:^(void (^block)(id, id)) {
+    void (^sink)(void (^block)(id, id)) =^(void (^block)(id, id)) {
         self.observer = ^(id oldState, id updatedState) {
             if (oldState && updatedState) {
                 if (!isRepeat(oldState, updatedState)) {
@@ -54,7 +55,9 @@
                 block(oldState, updatedState);
             }
         };
-    }];
+    };
+
+    return [self initWithSink:sink];
 }
 
 - (instancetype)skip:(BOOL (^)(id, id))when {

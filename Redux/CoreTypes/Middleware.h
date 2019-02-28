@@ -20,7 +20,7 @@ typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatchFunction, G
 #define ImplementMiddleware(SATEMENT)                                       \
 ^ DispatchFunctionChain (DispatchFunction function, GetState getState) {    \
     return ^DispatchFunction (DispatchFunction next) {                      \
-        return ^(id<RxAction> action) {                                     \
+        return ^(id<Action> action) {                                     \
             SATEMENT                                                        \
         };                                                                  \
     };                                                                      \

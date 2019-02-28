@@ -30,15 +30,16 @@ static NSArray *testFeedList() {
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test 1";
-        model.actionVC = 1;;
+        model.title = @"Test Counter";
+        model.actionVCName = @"CounterViewController";
+        model.actionVC = 2;
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
         model.title = @"Test 2";
-        model.actionVCName = @"";
+        model.actionVCName = @"CounterViewController";
         model.actionVC = 2;
         model;
     })];
@@ -86,8 +87,10 @@ static NSArray *testFeedList() {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FeedModel *model = [self.feedList objectAtIndex:indexPath.row];
-    if (!model.actionVCName.length) {
-
+    if (model.actionVCName.length) {
+        UIViewController *vc = (UIViewController *)[NSClassFromString(model.actionVCName) new];
+        vc.navigationItem.title = [model.title substringFromIndex:5];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
