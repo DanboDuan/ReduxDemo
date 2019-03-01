@@ -1,5 +1,5 @@
 # ReduxDemo
---
+
 
 参照[ReSwift](https://github.com/ReSwift/ReSwift)改写的Objective-C版本Redux。
 
@@ -44,6 +44,7 @@
 ## 参考
 
 1. [ReSwift](https://github.com/ReSwift/ReSwift)
+2. [Redux 核心概念](https://www.jianshu.com/p/3334467e4b32)
 2. [Redux](http://cn.redux.js.org/)
 
 ## 协议
