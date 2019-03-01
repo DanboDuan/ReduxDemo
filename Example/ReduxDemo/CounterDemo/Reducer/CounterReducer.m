@@ -12,7 +12,10 @@
 
 Reducer CounterReducer = ^CounterState * (id<Action> action, CounterState *state) {
     // should handler initAction with nil state?
-    
+    if (state == nil) {
+        return [CounterState stateWithNumber:0];
+    }
+
     if ([state isKindOfClass:[CounterState class]]) {
         
         if ([action isKindOfClass:[CounterIncrAction class]]) {

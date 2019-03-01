@@ -10,15 +10,15 @@
 @protocol Action;
 @protocol State;
 
-typedef void (^DispatchFunction)(id<Action> action);
+typedef id<Action> (^DispatchFunction)(id<Action> action);
 
 typedef id<State> (^GetState)(void);
-typedef DispatchFunction (^DispatchFunctionChain)(DispatchFunction function);
+typedef DispatchFunction (^DispatchFunctionChain)(DispatchFunction dispatch);
 
-typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatchFunction, GetState getState);
+typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatch, GetState getState);
 
 #define ImplementMiddleware(SATEMENT)                                       \
-^ DispatchFunctionChain (DispatchFunction function, GetState getState) {    \
+^ DispatchFunctionChain (DispatchFunction dispatch, GetState getState) {    \
     return ^DispatchFunction (DispatchFunction next) {                      \
         return ^(id<Action> action) {                                     \
             SATEMENT                                                        \

@@ -12,6 +12,10 @@
 
 Reducer ComplexReducer = ^ComplexState * (id<Action> action, ComplexState *state) {
 
+    if (!state) {
+        return [ComplexState stateWithCounter:CounterReducer(action, nil)];
+    }
+
     if ([state conformsToProtocol:@protocol(HasCounterState)]) {
         return [ComplexState stateWithCounter:CounterReducer(action, state.counterState)];
     }

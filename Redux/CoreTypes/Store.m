@@ -53,15 +53,15 @@
         self.autoSkipRepeats = autoSkipRepeats;
         self.reducer = rootReducer;
         self.subscriptions = [NSMutableSet set];
-        DispatchFunction defaultDispatch = ^(id<Action> action) {
-            [self internalDefaultDispatch:action];
+        DispatchFunction defaultDispatch = ^id<Action> (id<Action> action) {
+            return [self internalDefaultDispatch:action];
         };
 
         ReduxWeakSelf;
         self.dispatchFunction = middlewares.reverse.reduce(defaultDispatch,^id(DispatchFunction df, Middleware middleware){
-            DispatchFunction dispatch = ^(id<Action> action) {
+            DispatchFunction dispatch = ^id<Action>(id<Action> action) {
                 ReduxStrongSelf;
-                [self dispatch:action];
+                return [self dispatch:action];
             };
             GetState getState = ^id<State>() {
                 ReduxStrongSelf;
@@ -141,7 +141,7 @@
     return nil;
 }
 
--(void)internalDefaultDispatch:(id<Action>)action {
+-(id<Action>)internalDefaultDispatch:(id<Action>)action {
     if (self.isDispatching) {
          NSAssert(0, nil);
     }
@@ -151,10 +151,12 @@
     self.isDispatching = NO;
 
     self.state  = state;
+
+    return action;
 }
 
-- (void)dispatch:(id<Action>)action {
-    self.dispatchFunction(action);
+- (id<Action>)dispatch:(id<Action>)action {
+    return self.dispatchFunction(action);
 }
 
 

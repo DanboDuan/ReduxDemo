@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)unsubscribe:(id<Subscriber>)subscriber;
 
-- (void)dispatch:(id<Action>)action;
+- (id<Action>)dispatch:(id<Action>)action;
 
 @end
 
@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)unsubscribe:(id<Subscriber>)subscriber;
 
-- (void)dispatch:(id<Action>)action;
+- (id<Action>)dispatch:(id<Action>)action;
 
 @end
 
