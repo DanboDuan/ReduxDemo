@@ -36,6 +36,7 @@
 
 * combineReducers
 * [reduceReducers](https://github.com/redux-utilities/reduce-reducers)
+* Scheduled Dispatch
 * [ReSwift-Thunk](https://github.com/ReSwift/ReSwift-Thunk)
 * [ReSwift-Router](https://github.com/ReSwift/ReSwift-Router)
 * [ReSwift-Recorder](https://github.com/ReSwift/ReSwift-Recorder)
