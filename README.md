@@ -3,6 +3,14 @@
 
 参照[ReSwift](https://github.com/ReSwift/ReSwift)改写的Objective-C版本Redux。
 
+## Demo工程演示
+
+1. `git clone https://github.com/DanboDuan/ReduxDemo.git`
+2. `cd ReduxDemo/Eample`
+3. `pod install`
+4. `open ReduxDemo.xcworkspace`
+
+
 ## Swift vs Objective-C
 
 在把[ReSwift](https://github.com/ReSwift/ReSwift)改成`Objective-C`版的过程中一些个人体验。
