@@ -159,7 +159,7 @@ typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatch, GetState 
 
 - (void)subscribe:(id<Subscriber>)subscriber;
 
-- (void)subscribe:(id<Subscriber>)subscriber withTransform:(Subscription<SelectedState> (^) (Subscription<State>))transform;
+- (void)subscribe:(id<Subscriber>)subscriber withTransform:(Subscription<SelectedState> * (^) (Subscription<State> *))transform;
 
 - (void)unsubscribe:(id<Subscriber>)subscriber;
 
