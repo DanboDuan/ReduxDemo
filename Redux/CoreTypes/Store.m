@@ -18,7 +18,7 @@
 @property (nonatomic, strong) StateType state;
 @property (nonatomic, copy) DispatchFunction dispatchFunction;
 @property (copy, nonatomic) Reducer reducer;
-@property (strong, nonatomic) NSMutableSet<SubscriptionBox *> *subscriptions;
+@property (strong, nonatomic) NSMutableDictionary<NSString *,SubscriptionBox *> *subscriptions;
 @property (assign, nonatomic) BOOL isDispatching;
 @property (assign, nonatomic) BOOL autoSkipRepeats;
 
@@ -52,7 +52,7 @@
     if (self) {
         self.autoSkipRepeats = autoSkipRepeats;
         self.reducer = rootReducer;
-        self.subscriptions = [NSMutableSet set];
+        self.subscriptions = [NSMutableDictionary dictionary];
         DispatchFunction defaultDispatch = ^id<Action> (id<Action> action) {
             return [self internalDefaultDispatch:action];
         };
@@ -117,7 +117,7 @@
                                                  transformed:transformed
                                                   subscriber:subscriber];
 
-    [self.subscriptions addObject:box];
+    [self.subscriptions setObject:box forKey:box.identifier];
     
     if (self.state) {
         [orginal updateValues:nil with:self.state];
@@ -125,20 +125,8 @@
 }
 
 - (void)unsubscribe:(id<Subscriber>)subscriber {
-    SubscriptionBox *box = [self subscriptionWithSubscriber:subscriber];
-    if (box) {
-        [self.subscriptions removeObject:box];
-    }
-}
-
-- (SubscriptionBox *) subscriptionWithSubscriber:(id<Subscriber>)subscriber {
-    for (SubscriptionBox *sub in self.subscriptions) {
-        if(sub.subscriber == subscriber) {
-            return sub;
-        }
-    }
-
-    return nil;
+    NSString *identifier = [SubscriptionBox subscriberIdentifier:subscriber];
+    [self.subscriptions removeObjectForKey:identifier];
 }
 
 -(id<Action>)internalDefaultDispatch:(id<Action>)action {
@@ -161,9 +149,15 @@
 
 
 - (void)setState:(id<State>)state {
+    
+    if (!self.subscriptions.count) {
+         _state = state;
+        return;
+    }
+
     NSMutableArray<SubscriptionBox *> *toRemove = [NSMutableArray arrayWithCapacity:self.subscriptions.count];
 
-    for (SubscriptionBox *box in self.subscriptions) {
+    for (SubscriptionBox *box in self.subscriptions.allValues) {
         if (!box.subscriber) {
             [toRemove addObject:box];
             continue;
@@ -172,7 +166,7 @@
     }
     if (toRemove.count) {
         for (SubscriptionBox *box in toRemove) {
-            [self.subscriptions removeObject:box];
+            [self.subscriptions removeObjectForKey:box.identifier];
         }
     }
     

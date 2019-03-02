@@ -11,16 +11,17 @@
 
 @interface SubscriptionBox<__covariant StateType,__covariant TransformedType> ()
 
-
 @property (nonatomic, strong) Subscription<StateType> *originalSubscription;
 @property (nonatomic, weak) id<Subscriber> subscriber;
 @property (nonatomic, strong) NSString *identifier;
-
 
 @end
 
 @implementation SubscriptionBox
 
++ (NSString *)subscriberIdentifier:(id<Subscriber>)subscriber {
+    return [NSString stringWithFormat:@"%p", subscriber];
+}
 
 - (instancetype)initWith:(Subscription *)original
              transformed:(Subscription *)transformed
@@ -29,7 +30,7 @@
     if (self) {
         self.originalSubscription = original;
         self.subscriber = subscriber;
-        self.identifier = [NSString stringWithFormat:@"%p", subscriber];
+        self.identifier = [SubscriptionBox subscriberIdentifier:subscriber];
         if (transformed) {
             ReduxWeakSelf;
             transformed.observer = ^(id  _Nonnull oldState, id  _Nonnull updatedState) {
@@ -56,5 +57,16 @@
     return [self.identifier hash];
 }
 
+- (BOOL)isEqual:(id)other {
+    if (other == self) {
+        return YES;
+    }
+    if (![other isKindOfClass:[SubscriptionBox class]]) {
+        return NO;
+    }
+    SubscriptionBox *that = (SubscriptionBox *)other;
+
+    return [that.identifier isEqualToString:self.identifier];
+}
 
 @end

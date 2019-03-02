@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SubscriptionBox<__covariant StateType,__covariant TransformedType> : NSObject
 
 @property (nonatomic, weak, readonly) id<Subscriber> subscriber;;
+@property (nonatomic, strong, readonly) NSString *identifier;
+
++ (NSString *)subscriberIdentifier:(id<Subscriber>)subscriber;
 
 - (instancetype)initWith:(Subscription<StateType> *)original
              transformed:(Subscription<TransformedType> *)transformed
