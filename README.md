@@ -232,56 +232,55 @@ Reducer CounterReducer = ^CounterState * (id<Action> action, CounterState *state
 @implementation CounterViewController
 
 - (instancetype)init {
-	self = [super init];
-	if (self) {
-		self.store = [[Store alloc] initWithReducer:CounterReducer
+    self = [super init];
+    if (self) {
+        self.store = [[Store alloc] initWithReducer:CounterReducer
                                               state:[CounterState stateWithNumber:12]
                                         middlewares:@[ActionLogger, StateLogger] /*autoSkipRepeats:NO*/];
         // if autoSkipRepeats NO, the same number with state will repeatly callback
-	}
-	return self;
+    }
+    return self;
 }
 
 - (void)buttonClick:(UIButton *)sender {
-	NSString *type = sender.currentTitle;
-	if ([type isEqualToString:@"-"]) {
-		[self.store dispatch:[CounterDecrAction new]];
-	} else {
-	    [self.store dispatch:[CounterIncrAction new]];
-	}
+    NSString *type = sender.currentTitle;
+    if ([type isEqualToString:@"-"]) {
+        [self.store dispatch:[CounterDecrAction new]];
+    } else {
+        [self.store dispatch:[CounterIncrAction new]];
+    }
 }
 
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	[self.store subscribe:self];
+    [super viewDidLoad];
+    [self.store subscribe:self];
 }
 
 - (void)updateState:(CounterState *)state {
-	self.label.text = [NSString stringWithFormat:@"%zd",state.number];
+    self.label.text = [NSString stringWithFormat:@"%zd",state.number];
 }
-@end
+
 ```
 
 ##### Middleware 比如打印日志
 
-```
-
+```Objective-C
 Middleware ActionLogger = ^DispatchFunctionChain (DispatchFunction dispatch, GetState getState) {  
-	return ^DispatchFunction (DispatchFunction next) { 
-		return ^(id<Action> action) { 
-			printf("\nACTION %s\n", [action description].UTF8String);
-			next(action);
-			return action;
+    return ^DispatchFunction (DispatchFunction next) { 
+        return ^(id<Action> action) { 
+            printf("\nACTION %s\n", [action description].UTF8String);
+            next(action);
+            return action;
         }; 
     }; 
 };
 
 Middleware StateLogger = ^DispatchFunctionChain (DispatchFunction dispatch, GetState getState) {  
-	return ^DispatchFunction (DispatchFunction next) { 
-		return ^(id<Action> action) { 
-			next(action);
-			printf("\nSTATE %s\n", [getState() description].UTF8String);
-			return action;
+    return ^DispatchFunction (DispatchFunction next) { 
+        return ^(id<Action> action) { 
+            next(action);
+            printf("\nSTATE %s\n", [getState() description].UTF8String);
+            return action;
         }; 
     }; 
 };
