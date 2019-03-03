@@ -31,7 +31,12 @@
 
 ## 使用
 
-直接copy代码，并用你的项目前缀重命名文件、类和协议。
+* 直接copy代码，并用你的项目前缀重命名文件、类和协议。
+
+### Tip
+
+1. 请参考Demo
+2. 异步操作参照[Thunk](Docs/Thunk.md)
 
 ## 核心概念
 
@@ -88,86 +93,8 @@
 1. 结构复杂，代码量增加，简单的场景其实不需要 Redux
 2. 性能问题
 
-## Code
+## Demo Code
 
-### Redux
-
-##### Action
-
-```Objective-C
-@protocol Action <NSObject>
-@end
-```
-##### State
-
-```Objective-C
-@protocol State <NSObject>
-@end
-```
-
-##### Reducer
-
-纯函数，根据输入的action和state返回更新后的state
-
-```Objective-C
-@protocol Action;
-@protocol State;
-
-typedef id<State> (^Reducer)(id<Action> action,id<State> state);
-```
-
-##### Subscriber
-
-接受state更新的通知。
-
-```Objective-C
-@protocol Subscriber <NSObject>
-
-- (void)updateState:(id)state;
-
-@end
-```
-##### Middleware
-
-
-Middleware比较复杂
-```Objective-C
-@protocol Action;
-@protocol State;
-
-typedef id<Action> (^DispatchFunction)(id<Action> action);
-
-typedef id<State> (^GetState)(void);
-typedef DispatchFunction (^DispatchFunctionChain)(DispatchFunction dispatch);
-
-typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatch, GetState getState);
-```
-##### Store
-
-维护管理state并提供订阅state和分发action的接口。
-
-```Objective-C
-@protocol Store <NSObject>
-
-@property (nonatomic, strong, readonly) id<State> state;
-@property (nonatomic, copy, readonly) DispatchFunction dispatchFunction;
-
-- (instancetype)initWithReducer:(Reducer)rootReducer
-                          state:(nullable id<State>)rootState
-                    middlewares:(NSArray<Middleware> *)middlewares
-                autoSkipRepeats:(BOOL)autoSkipRepeats;
-
-- (void)subscribe:(id<Subscriber>)subscriber;
-
-- (void)subscribe:(id<Subscriber>)subscriber withTransform:(Subscription<SelectedState> * (^) (Subscription<State> *))transform;
-
-- (void)unsubscribe:(id<Subscriber>)subscriber;
-
-- (id<Action>)dispatch:(id<Action>)action;
-
-@end
-```
-transform可以有多重实现方式，这里可以见仁见智。
 ### CounterDemo
 
 这个案例比较简单，但是已经具备了Redux的绝大部分核心组件。
@@ -298,13 +225,13 @@ Middleware StateLogger = ^DispatchFunctionChain (DispatchFunction dispatch, GetS
 * Action
 * Store
 * Middleware
+* [Thunk](Docs/Thunk.md)
 
 ## TODO
 
 * combineReducers
 * [reduceReducers](https://github.com/redux-utilities/reduce-reducers)
 * Scheduled Dispatch
-* [ReSwift-Thunk](https://github.com/ReSwift/ReSwift-Thunk)
 * [ReSwift-Router](https://github.com/ReSwift/ReSwift-Router)
 * [ReSwift-Recorder](https://github.com/ReSwift/ReSwift-Recorder)
 

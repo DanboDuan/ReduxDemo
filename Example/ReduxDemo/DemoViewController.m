@@ -42,6 +42,13 @@ static NSArray *testFeedList() {
         model;
     })];
 
+    [array addObject:({
+        FeedModel *model = [FeedModel new];
+        model.title = @"Test Asyc Demo";
+        model.actionVCName = @"ThunkViewController";
+        model;
+    })];
+
     return array;
 }
 

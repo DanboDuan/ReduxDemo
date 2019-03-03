@@ -29,5 +29,5 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Redux/**/*'
-  s.public_header_files = 'Redux/CoreTypes/*.h'
+  s.public_header_files = 'Redux/CoreTypes/*.h','Redux/Thunk/*.h'
 end
