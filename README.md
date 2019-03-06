@@ -36,7 +36,9 @@
 ### Tip
 
 1. 请参考Demo
-2. 异步操作参照[Thunk](Docs/Thunk.md)
+* 异步操作参照[Thunk](Docs/Thunk.md)
+* [CombineReducers](Docs/CombineReducers.md)
+* [ReduceReducers](Docs/ReduceReducers.md)
 
 ## 核心概念
 
@@ -225,12 +227,13 @@ Middleware StateLogger = ^DispatchFunctionChain (DispatchFunction dispatch, GetS
 * Action
 * Store
 * Middleware
-* [Thunk](Docs/Thunk.md)
+* [Thunk](Docs/Thunk.md)(异步操作)
+* [CombineReducers](Docs/CombineReducers.md)
+* [ReduceReducers](Docs/ReduceReducers.md)
+
 
 ## TODO
 
-* combineReducers
-* [reduceReducers](https://github.com/redux-utilities/reduce-reducers)
 * Scheduled Dispatch
 * [ReSwift-Router](https://github.com/ReSwift/ReSwift-Router)
 * [ReSwift-Recorder](https://github.com/ReSwift/ReSwift-Recorder)
