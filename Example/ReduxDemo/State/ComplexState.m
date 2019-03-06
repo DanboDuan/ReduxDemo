@@ -29,7 +29,7 @@
     return self;
 }
 
-- (BOOL)isEqualToState:(nullable id<State>)object {
+- (BOOL)isEqualToState:(id<State>)object {
 
     if ([object isKindOfClass:[ComplexState class]]) {
         ComplexState *state = (ComplexState *)object;

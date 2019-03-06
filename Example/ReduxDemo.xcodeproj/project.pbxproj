@@ -21,6 +21,11 @@
 		C416903C2227BECA007859EF /* ComplexReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = C416903B2227BECA007859EF /* ComplexReducer.m */; };
 		C491FCC6222B70B800EC2B75 /* ThunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C491FCC5222B70B800EC2B75 /* ThunkViewController.m */; };
 		C491FCC9222B717F00EC2B75 /* AsyncAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C491FCC8222B717F00EC2B75 /* AsyncAction.m */; };
+		C4ABC2D9222F9F6B0032E93A /* TextReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC2D8222F9F6B0032E93A /* TextReducer.m */; };
+		C4ABC2DD222FA3920032E93A /* ReduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC2DC222FA3920032E93A /* ReduceViewController.m */; };
+		C4ABC2E0222FA3E20032E93A /* CombineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC2DF222FA3E20032E93A /* CombineViewController.m */; };
+		C4ABC2E3222FA88D0032E93A /* OperationState.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC2E2222FA88D0032E93A /* OperationState.m */; };
+		C4ABC2E9222FA9F40032E93A /* CombinedReducers.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ABC2E8222FA9F40032E93A /* CombinedReducers.m */; };
 		C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43A12211C4880082F312 /* AppDelegate.m */; };
 		C4AC43A82211C4880082F312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A62211C4880082F312 /* Main.storyboard */; };
 		C4AC43AA2211C4890082F312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AC43A92211C4890082F312 /* Assets.xcassets */; };
@@ -76,6 +81,16 @@
 		C491FCC5222B70B800EC2B75 /* ThunkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThunkViewController.m; sourceTree = "<group>"; };
 		C491FCC7222B717F00EC2B75 /* AsyncAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncAction.h; sourceTree = "<group>"; };
 		C491FCC8222B717F00EC2B75 /* AsyncAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncAction.m; sourceTree = "<group>"; };
+		C4ABC2D7222F9F6B0032E93A /* TextReducer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextReducer.h; sourceTree = "<group>"; };
+		C4ABC2D8222F9F6B0032E93A /* TextReducer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextReducer.m; sourceTree = "<group>"; };
+		C4ABC2DB222FA3920032E93A /* ReduceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReduceViewController.h; sourceTree = "<group>"; };
+		C4ABC2DC222FA3920032E93A /* ReduceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReduceViewController.m; sourceTree = "<group>"; };
+		C4ABC2DE222FA3E20032E93A /* CombineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombineViewController.h; sourceTree = "<group>"; };
+		C4ABC2DF222FA3E20032E93A /* CombineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombineViewController.m; sourceTree = "<group>"; };
+		C4ABC2E1222FA88D0032E93A /* OperationState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationState.h; sourceTree = "<group>"; };
+		C4ABC2E2222FA88D0032E93A /* OperationState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationState.m; sourceTree = "<group>"; };
+		C4ABC2E7222FA9F40032E93A /* CombinedReducers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombinedReducers.h; sourceTree = "<group>"; };
+		C4ABC2E8222FA9F40032E93A /* CombinedReducers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombinedReducers.m; sourceTree = "<group>"; };
 		C4AC439D2211C4880082F312 /* ReduxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AC43A02211C4880082F312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4AC43A12211C4880082F312 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,22 +164,10 @@
 		C416901922277DCA007859EF /* CounterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C416902822278140007859EF /* Reducer */,
-				C4169027222780ED007859EF /* Action */,
-				C4169026222780E3007859EF /* State */,
 				C4169023222780D8007859EF /* CounterViewController.h */,
 				C4169024222780D8007859EF /* CounterViewController.m */,
 			);
 			path = CounterDemo;
-			sourceTree = "<group>";
-		};
-		C4169026222780E3007859EF /* State */ = {
-			isa = PBXGroup;
-			children = (
-				C416901A22277E89007859EF /* CounterState.h */,
-				C416901B22277E89007859EF /* CounterState.m */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 		C4169027222780ED007859EF /* Action */ = {
@@ -181,6 +184,12 @@
 			children = (
 				C416901D22277FA9007859EF /* CounterReducer.h */,
 				C416901E22277FA9007859EF /* CounterReducer.m */,
+				C416903A2227BECA007859EF /* ComplexReducer.h */,
+				C416903B2227BECA007859EF /* ComplexReducer.m */,
+				C4ABC2D7222F9F6B0032E93A /* TextReducer.h */,
+				C4ABC2D8222F9F6B0032E93A /* TextReducer.m */,
+				C4ABC2E7222FA9F40032E93A /* CombinedReducers.h */,
+				C4ABC2E8222FA9F40032E93A /* CombinedReducers.m */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -197,8 +206,6 @@
 		C41690312227BC9E007859EF /* ComplexCounterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C41690392227BEB6007859EF /* Reducer */,
-				C41690352227BD1A007859EF /* State */,
 				C41690322227BCCD007859EF /* ComplexCounterViewController.h */,
 				C41690332227BCCD007859EF /* ComplexCounterViewController.m */,
 			);
@@ -210,17 +217,12 @@
 			children = (
 				C41690362227BD38007859EF /* ComplexState.h */,
 				C41690372227BD38007859EF /* ComplexState.m */,
+				C416901A22277E89007859EF /* CounterState.h */,
+				C416901B22277E89007859EF /* CounterState.m */,
+				C4ABC2E1222FA88D0032E93A /* OperationState.h */,
+				C4ABC2E2222FA88D0032E93A /* OperationState.m */,
 			);
 			path = State;
-			sourceTree = "<group>";
-		};
-		C41690392227BEB6007859EF /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				C416903A2227BECA007859EF /* ComplexReducer.h */,
-				C416903B2227BECA007859EF /* ComplexReducer.m */,
-			);
-			path = Reducer;
 			sourceTree = "<group>";
 		};
 		C491FCC3222B6EF500EC2B75 /* ThunkDemo */ = {
@@ -232,6 +234,17 @@
 				C491FCC8222B717F00EC2B75 /* AsyncAction.m */,
 			);
 			path = ThunkDemo;
+			sourceTree = "<group>";
+		};
+		C4ABC2DA222FA3640032E93A /* ReducersDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4ABC2DB222FA3920032E93A /* ReduceViewController.h */,
+				C4ABC2DC222FA3920032E93A /* ReduceViewController.m */,
+				C4ABC2DE222FA3E20032E93A /* CombineViewController.h */,
+				C4ABC2DF222FA3E20032E93A /* CombineViewController.m */,
+			);
+			path = ReducersDemo;
 			sourceTree = "<group>";
 		};
 		C4AC43942211C4880082F312 = {
@@ -260,8 +273,12 @@
 			isa = PBXGroup;
 			children = (
 				C416902922278A94007859EF /* Middlewares */,
+				C416902822278140007859EF /* Reducer */,
+				C4169027222780ED007859EF /* Action */,
+				C41690352227BD1A007859EF /* State */,
 				C491FCC3222B6EF500EC2B75 /* ThunkDemo */,
 				C41690312227BC9E007859EF /* ComplexCounterDemo */,
+				C4ABC2DA222FA3640032E93A /* ReducersDemo */,
 				C416901922277DCA007859EF /* CounterDemo */,
 				C4168FFD22262433007859EF /* DemoViewController.h */,
 				C4168FFE22262433007859EF /* DemoViewController.m */,
@@ -501,14 +518,19 @@
 				C4AC43B02211C4890082F312 /* main.m in Sources */,
 				C491FCC9222B717F00EC2B75 /* AsyncAction.m in Sources */,
 				C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */,
+				C4ABC2E3222FA88D0032E93A /* OperationState.m in Sources */,
 				C416902C22278AAE007859EF /* Logger.m in Sources */,
+				C4ABC2E9222FA9F40032E93A /* CombinedReducers.m in Sources */,
 				C416901C22277E89007859EF /* CounterState.m in Sources */,
 				C41690382227BD38007859EF /* ComplexState.m in Sources */,
 				C416901F22277FA9007859EF /* CounterReducer.m in Sources */,
 				C41690222227800C007859EF /* CounterAction.m in Sources */,
 				C491FCC6222B70B800EC2B75 /* ThunkViewController.m in Sources */,
+				C4ABC2DD222FA3920032E93A /* ReduceViewController.m in Sources */,
 				C4168FFF22262433007859EF /* DemoViewController.m in Sources */,
 				C416903C2227BECA007859EF /* ComplexReducer.m in Sources */,
+				C4ABC2E0222FA3E20032E93A /* CombineViewController.m in Sources */,
+				C4ABC2D9222F9F6B0032E93A /* TextReducer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

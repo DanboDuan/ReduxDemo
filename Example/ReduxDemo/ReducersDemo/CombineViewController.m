@@ -1,40 +1,43 @@
 //
-//  CounterViewController.m
+//  CombineViewController.m
 //  ReduxDemo
 //
-//  Created by bob on 2019/2/28.
+//  Created by bob on 2019/3/6.
 //  Copyright © 2019 bob. All rights reserved.
 //
 
-#import "CounterViewController.h"
-#import <Redux/Redux.h>
+#import "CombineViewController.h"
+#import <Redux/Combine.h>
 
 #import "CounterState.h"
+#import "OperationState.h"
 #import "CounterAction.h"
-#import "CounterReducer.h"
+#import "CombinedReducers.h"
 #import "Logger.h"
 
+static const NSString * kSubCounterState = @"kSubCounterState";
+static const NSString * kSubOperationState = @"kSubOperationState";
 
-@interface CounterViewController () <Subscriber>
 
-@property (strong, nonatomic) Store<CounterState *> *store;
+@interface CombineViewController ()<Subscriber>
+
+@property (strong, nonatomic) Store<CombinedState *> *store;
 
 @property (strong, nonatomic) UILabel *presenter;
 
 @end
 
-@implementation CounterViewController
+@implementation CombineViewController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        CounterState *state = [CounterState new];
-        state.number = 11;
-
-        self.store = [[Store alloc] initWithReducer:CounterReducer
-                                              state:state
-                                        middlewares:@[ActionLogger, StateLogger] /*autoSkipRepeats:NO*/];
-        // if autoSkipRepeats NO, the same number with state will repeatly callback
+        Reducer reducer = combineReducers(@{kSubCounterState:CombinedNumberReducer,
+                                            kSubOperationState:CombinedOperationtReducer
+                                            });
+        self.store = [[Store alloc] initWithReducer:reducer
+                                              state:nil
+                                        middlewares:@[ActionLogger, StateLogger]];
     }
     return self;
 }
@@ -48,8 +51,8 @@
 - (void)loadButtons {
     CGFloat width = self.view.frame.size.width;
 
-    UILabel *presenter = [[UILabel alloc] initWithFrame:CGRectMake(width/4, 100, width/2, 60)];
-    presenter.font = [UIFont boldSystemFontOfSize:30];
+    UILabel *presenter = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, width, 60)];
+    presenter.font = [UIFont boldSystemFontOfSize:18];
     presenter.textAlignment = NSTextAlignmentCenter;
     presenter.textColor = [UIColor blackColor];
     [self.view addSubview:presenter];
@@ -83,6 +86,10 @@
 
 - (void)buttonClick:(UIButton *)sender {
     NSString *type = sender.currentTitle;
+    //  dispatch OperationAction to CombinedOperationtReducer
+    [self.store dispatch:[OperationAction actionWithOperation:type]];
+    
+    //  dispatch Actions to CombinedNumberReducer
     if ([type isEqualToString:@"-"]) {
         [self.store dispatch:[CounterDecrAction new]];
     } else {
@@ -91,6 +98,7 @@
 }
 
 - (void)valueButtontClick:(UIButton *)sender {
+    [self.store dispatch:[OperationAction actionWithOperation:@"Set"]];
     [self.store dispatch:[CounterSetAction actionWithValue:8]];
 }
 
@@ -103,9 +111,11 @@
     [self.store unsubscribe:self];
 }
 
-- (void)updateState:(CounterState *)state {
-    NSAssert([state isKindOfClass:[CounterState class]], @"");
-    self.presenter.text = [NSString stringWithFormat:@"%zd",state.number];
+- (void)updateState:(CombinedState *)state {
+    NSAssert([state isKindOfClass:[CombinedState class]], @"");
+    CounterState *number = [state subStateForKey:kSubCounterState];
+    OperationState *operation = [state subStateForKey:kSubOperationState];
+    self.presenter.text = [NSString stringWithFormat:@"Operation(%@) number = %zd",operation.operation , number.number];
 }
 
 @end

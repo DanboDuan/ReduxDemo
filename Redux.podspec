@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Redux'
   s.version          = '1.1.0'
-  s.summary          = 'test'
+  s.summary          = 'Redux in Objective-C'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,35 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'bob' => 'bob170131@gmail.com' }
   s.source           = { :git => 'https://github.com/DanboDuan/ReduxDemo.git', :tag => s.version.to_s }
-
   s.ios.deployment_target = '8.0'
+  s.default_subspec = 'Core','Thunk','Reduce','Combine'
 
-  s.source_files = 'Redux/**/*'
-  s.public_header_files = 'Redux/CoreTypes/*.h','Redux/Thunk/*.h'
+  s.subspec 'Utility' do |utility|
+        utility.source_files = 'Redux/Utility/**/*'
+  end
+  
+  s.subspec 'Core' do |c|
+        c.source_files = 'Redux/CoreTypes/**/*'
+        c.public_header_files = 'Redux/CoreTypes/*.h'
+        c.dependency 'Redux/Utility'
+  end
+
+  s.subspec 'Thunk' do |thunk|
+        thunk.source_files = 'Redux/Thunk/**/*'
+        thunk.public_header_files = 'Redux/Thunk/*.h'
+        thunk.dependency 'Redux/Core'
+  end
+
+  s.subspec 'Reduce' do |reduce|
+        reduce.source_files = 'Redux/ReduceReducers/**/*'
+        reduce.public_header_files = 'Redux/ReduceReducers/*.h'
+        reduce.dependency 'Redux/Core'
+  end
+
+  s.subspec 'Combine' do |combine|
+        combine.source_files = 'Redux/CombineReducers/**/*'
+        combine.public_header_files = 'Redux/CombineReducers/*.h'
+        combine.dependency 'Redux/Core'
+  end
+
 end

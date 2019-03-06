@@ -49,6 +49,20 @@ static NSArray *testFeedList() {
         model;
     })];
 
+    [array addObject:({
+        FeedModel *model = [FeedModel new];
+        model.title = @"Test ReduceReducers Demo";
+        model.actionVCName = @"ReduceViewController";
+        model;
+    })];
+
+    [array addObject:({
+        FeedModel *model = [FeedModel new];
+        model.title = @"Test CombineReducers Demo";
+        model.actionVCName = @"CombineViewController";
+        model;
+    })];
+
     return array;
 }
 

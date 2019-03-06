@@ -31,8 +31,11 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        CounterState *state = [CounterState new];
+        state.number = 13;
+
         self.store = [[Store alloc] initWithReducer:ComplexReducer
-                                              state:[ComplexState stateWithCounter:[CounterState stateWithNumber:12]]
+                                              state:[ComplexState stateWithCounter:state]
                                         middlewares:@[ActionLogger, StateLogger]
                                     autoSkipRepeats:NO];
     }
@@ -83,16 +86,11 @@
 }
 
 - (void)buttonClick:(UIButton *)sender {
-    static NSUInteger action = 0;
-    if (action++ %4 == 0) {
-        [self.store dispatch:[CounterTypeAction actionWithType:sender.currentTitle]];
+    NSString *type = sender.currentTitle;
+    if ([type isEqualToString:@"-"]) {
+        [self.store dispatch:[CounterDecrAction new]];
     } else {
-        NSString *type = sender.currentTitle;
-        if ([type isEqualToString:@"-"]) {
-            [self.store dispatch:[CounterDecrAction new]];
-        } else {
-            [self.store dispatch:[CounterIncrAction new]];
-        }
+        [self.store dispatch:[CounterIncrAction new]];
     }
 }
 
@@ -117,6 +115,7 @@
 }
 
 - (void)updateState:(CounterState *)state {
+    NSAssert([state isKindOfClass:[CounterState class]], @"");
     self.presenter.text = [NSString stringWithFormat:@"%zd",state.number];
 }
 

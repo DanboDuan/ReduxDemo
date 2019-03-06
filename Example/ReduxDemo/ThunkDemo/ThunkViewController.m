@@ -30,9 +30,12 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        CounterState *state = [CounterState new];
+        state.number = 11;
+
         self.store = [[Store alloc] initWithReducer:CounterReducer
-                                              state:[CounterState stateWithNumber:12]
-                                        middlewares:@[ThunkMiddleware, ActionLogger, StateLogger]];
+                                              state:state
+                                        middlewares:@[ActionLogger, StateLogger, ThunkMiddleware]];
     }
     return self;
 }
@@ -102,6 +105,8 @@
 }
 
 - (void)updateState:(CounterState *)state {
+    NSAssert([state isKindOfClass:[CounterState class]], @"");
     self.presenter.text = [NSString stringWithFormat:@"%zd",state.number];
 }
+
 @end

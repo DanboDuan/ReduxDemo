@@ -6,7 +6,7 @@
 //  Copyright © 2019 bob. All rights reserved.
 //
 
-#import <Redux/ThunkAction.h>
+#import <Redux/Thunk.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

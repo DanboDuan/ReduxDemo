@@ -24,11 +24,11 @@ FOUNDATION_EXTERN NSString * const CounterDecrActionType;
 @end
 
 
-@interface CounterTypeAction : NSObject<Action>
+@interface OperationAction : NSObject<Action>
 
-@property (nonatomic, strong, readonly) NSString *type;
+@property (nonatomic, strong, readonly) NSString *operation;
 
-+ (instancetype)actionWithType:(NSString *)type;
++ (instancetype)actionWithOperation:(NSString *)operation;
 
 @end
 

@@ -29,30 +29,30 @@ NSString * const CounterDecrActionType    =   @"-";
 @end
 
 
-@interface CounterTypeAction ()
+@interface OperationAction ()
 
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *operation;
 
 @end
 
 
-@implementation CounterTypeAction
+@implementation OperationAction
 
-+ (instancetype)actionWithType:(NSString *)type {
-    return [[self alloc] initWithType:type];
++ (instancetype)actionWithOperation:(NSString *)operation {
+    return [[self alloc] initWithOperation:operation];
 }
 
-- (instancetype)initWithType:(NSString *)type {
+- (instancetype)initWithOperation:(NSString *)operation {
     self = [super init];
     if (self) {
-        self.type = type;
+        self.operation = operation;
     }
 
     return self;
 }
 
 -(NSString *)description {
-    return [NSString stringWithFormat:@"CounterTypeAction(%@)",self.type];
+    return [NSString stringWithFormat:@"OperationAction(%@)",self.operation];
 }
 
 @end

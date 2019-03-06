@@ -10,4 +10,4 @@
 @protocol Action;
 @protocol State;
 
-typedef id<State> (^Reducer)(id<Action> action,id<State> state);
+typedef id<State> (^Reducer)(id<Action> action, id<State> state);

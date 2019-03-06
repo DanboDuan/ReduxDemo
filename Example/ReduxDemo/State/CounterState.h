@@ -13,9 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CounterState : NSObject<State>
 
-@property (nonatomic, assign, readonly) NSInteger number;
-
-+ (instancetype)stateWithNumber:(NSInteger)number;
+@property (nonatomic, assign) NSInteger number;
+@property (nonatomic, copy) NSString *operation;
 
 @end
 

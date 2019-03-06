@@ -1,21 +1,21 @@
 //
-//  CounterViewController.m
+//  ReduceViewController.m
 //  ReduxDemo
 //
-//  Created by bob on 2019/2/28.
+//  Created by bob on 2019/3/6.
 //  Copyright © 2019 bob. All rights reserved.
 //
 
-#import "CounterViewController.h"
-#import <Redux/Redux.h>
+#import "ReduceViewController.h"
+#import <Redux/Reduce.h>
 
 #import "CounterState.h"
 #import "CounterAction.h"
 #import "CounterReducer.h"
+#import "TextReducer.h"
 #import "Logger.h"
 
-
-@interface CounterViewController () <Subscriber>
+@interface ReduceViewController ()<Subscriber>
 
 @property (strong, nonatomic) Store<CounterState *> *store;
 
@@ -23,18 +23,14 @@
 
 @end
 
-@implementation CounterViewController
+@implementation ReduceViewController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        CounterState *state = [CounterState new];
-        state.number = 11;
-
-        self.store = [[Store alloc] initWithReducer:CounterReducer
-                                              state:state
-                                        middlewares:@[ActionLogger, StateLogger] /*autoSkipRepeats:NO*/];
-        // if autoSkipRepeats NO, the same number with state will repeatly callback
+        self.store = [[Store alloc] initWithReducer:reduceReducers(@[CounterReducer, TextReducer])
+                                              state:nil
+                                        middlewares:@[ActionLogger, StateLogger]];
     }
     return self;
 }
@@ -48,8 +44,8 @@
 - (void)loadButtons {
     CGFloat width = self.view.frame.size.width;
 
-    UILabel *presenter = [[UILabel alloc] initWithFrame:CGRectMake(width/4, 100, width/2, 60)];
-    presenter.font = [UIFont boldSystemFontOfSize:30];
+    UILabel *presenter = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, width, 60)];
+    presenter.font = [UIFont boldSystemFontOfSize:18];
     presenter.textAlignment = NSTextAlignmentCenter;
     presenter.textColor = [UIColor blackColor];
     [self.view addSubview:presenter];
@@ -105,7 +101,7 @@
 
 - (void)updateState:(CounterState *)state {
     NSAssert([state isKindOfClass:[CounterState class]], @"");
-    self.presenter.text = [NSString stringWithFormat:@"%zd",state.number];
+    self.presenter.text = [NSString stringWithFormat:@"After (%@) number = %zd", state.operation, state.number];
 }
 
 @end
