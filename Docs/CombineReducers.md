@@ -68,8 +68,8 @@ Store *store = [[Store alloc] initWithReducer:reducer
 ```Objective-C
 
 - (void)updateState:(CombinedState *)state {
-	// 依次处理每个sub state
-    SubState01 subState01 = [state subStateForKey: SubReducer01];
+    // 依次处理每个sub state
+    SubState01 subState01 = [state subStateForKey:kSubState01];
     ...
 }
 
