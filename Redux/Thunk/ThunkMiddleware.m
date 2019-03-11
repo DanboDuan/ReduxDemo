@@ -6,7 +6,7 @@
 //
 
 #import "ThunkMiddleware.h"
-#import <Redux/Redux.h>
+#import "Redux.h"
 #import "ThunkAction.h"
 
 Middleware ThunkMiddleware = ImplementMiddleware({

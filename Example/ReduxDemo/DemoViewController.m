@@ -30,36 +30,44 @@ static NSArray *testFeedList() {
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test Counter";
+        model.title = @"Counter";
         model.actionVCName = @"CounterViewController";
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test ComplexCounter";
+        model.title = @"ComplexCounter";
         model.actionVCName = @"ComplexCounterViewController";
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test Asyc Demo";
+        model.title = @"Asyc Demo";
         model.actionVCName = @"ThunkViewController";
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test ReduceReducers Demo";
+        model.title = @"ReduceReducers Demo";
         model.actionVCName = @"ReduceViewController";
         model;
     })];
 
     [array addObject:({
         FeedModel *model = [FeedModel new];
-        model.title = @"Test CombineReducers Demo";
+        model.title = @"CombineReducers Demo";
         model.actionVCName = @"CombineViewController";
+        model;
+    })];
+
+
+    [array addObject:({
+        FeedModel *model = [FeedModel new];
+        model.title = @"Schedule Demo";
+        model.actionVCName = @"ScheduleViewController";
         model;
     })];
 
@@ -108,7 +116,7 @@ static NSArray *testFeedList() {
     FeedModel *model = [self.feedList objectAtIndex:indexPath.row];
     if (model.actionVCName.length) {
         UIViewController *vc = (UIViewController *)[NSClassFromString(model.actionVCName) new];
-        vc.navigationItem.title = [model.title substringFromIndex:5];
+        vc.navigationItem.title = model.title;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

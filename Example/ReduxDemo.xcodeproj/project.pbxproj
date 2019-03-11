@@ -33,6 +33,9 @@
 		C4AC43B02211C4890082F312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43AF2211C4890082F312 /* main.m */; };
 		C4AC43BA2211C4890082F312 /* ReduxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43B92211C4890082F312 /* ReduxDemoTests.m */; };
 		C4AC43C52211C4890082F312 /* ReduxDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AC43C42211C4890082F312 /* ReduxDemoUITests.m */; };
+		C4D1481B223688AD008F629F /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1481A223688AD008F629F /* ScheduleViewController.m */; };
+		C4D1481E22368A05008F629F /* ScheduleReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1481D22368A05008F629F /* ScheduleReducer.m */; };
+		C4D1482122368B06008F629F /* ScheduledCounterAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1482022368B06008F629F /* ScheduledCounterAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,12 @@
 		C4AC43C02211C4890082F312 /* ReduxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AC43C42211C4890082F312 /* ReduxDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReduxDemoUITests.m; sourceTree = "<group>"; };
 		C4AC43C62211C4890082F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D14819223688AD008F629F /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		C4D1481A223688AD008F629F /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		C4D1481C22368A05008F629F /* ScheduleReducer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleReducer.h; sourceTree = "<group>"; };
+		C4D1481D22368A05008F629F /* ScheduleReducer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleReducer.m; sourceTree = "<group>"; };
+		C4D1481F22368B06008F629F /* ScheduledCounterAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduledCounterAction.h; sourceTree = "<group>"; };
+		C4D1482022368B06008F629F /* ScheduledCounterAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduledCounterAction.m; sourceTree = "<group>"; };
 		D3A73DB10DEA634BBF2EFEED /* Pods-ReduxDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemoUITests/Pods-ReduxDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7C55305D7A8E5A2CC791905 /* libPods-ReduxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF94E2499087D65EAD09A3F4 /* Pods-ReduxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxDemo/Pods-ReduxDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +184,8 @@
 			children = (
 				C41690202227800C007859EF /* CounterAction.h */,
 				C41690212227800C007859EF /* CounterAction.m */,
+				C4D1481F22368B06008F629F /* ScheduledCounterAction.h */,
+				C4D1482022368B06008F629F /* ScheduledCounterAction.m */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -190,6 +201,8 @@
 				C4ABC2D8222F9F6B0032E93A /* TextReducer.m */,
 				C4ABC2E7222FA9F40032E93A /* CombinedReducers.h */,
 				C4ABC2E8222FA9F40032E93A /* CombinedReducers.m */,
+				C4D1481C22368A05008F629F /* ScheduleReducer.h */,
+				C4D1481D22368A05008F629F /* ScheduleReducer.m */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 		C4AC439F2211C4880082F312 /* ReduxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C4D1481822368898008F629F /* ScheduleDemo */,
 				C416902922278A94007859EF /* Middlewares */,
 				C416902822278140007859EF /* Reducer */,
 				C4169027222780ED007859EF /* Action */,
@@ -309,6 +323,15 @@
 				C4AC43C62211C4890082F312 /* Info.plist */,
 			);
 			path = ReduxDemoUITests;
+			sourceTree = "<group>";
+		};
+		C4D1481822368898008F629F /* ScheduleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C4D14819223688AD008F629F /* ScheduleViewController.h */,
+				C4D1481A223688AD008F629F /* ScheduleViewController.m */,
+			);
+			path = ScheduleDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,11 +538,14 @@
 			files = (
 				C4169025222780D8007859EF /* CounterViewController.m in Sources */,
 				C41690342227BCCD007859EF /* ComplexCounterViewController.m in Sources */,
+				C4D1482122368B06008F629F /* ScheduledCounterAction.m in Sources */,
 				C4AC43B02211C4890082F312 /* main.m in Sources */,
 				C491FCC9222B717F00EC2B75 /* AsyncAction.m in Sources */,
 				C4AC43A22211C4880082F312 /* AppDelegate.m in Sources */,
 				C4ABC2E3222FA88D0032E93A /* OperationState.m in Sources */,
 				C416902C22278AAE007859EF /* Logger.m in Sources */,
+				C4D1481E22368A05008F629F /* ScheduleReducer.m in Sources */,
+				C4D1481B223688AD008F629F /* ScheduleViewController.m in Sources */,
 				C4ABC2E9222FA9F40032E93A /* CombinedReducers.m in Sources */,
 				C416901C22277E89007859EF /* CounterState.m in Sources */,
 				C41690382227BD38007859EF /* ComplexState.m in Sources */,

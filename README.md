@@ -230,11 +230,11 @@ Middleware StateLogger = ^DispatchFunctionChain (DispatchFunction dispatch, GetS
 * [Thunk](Docs/Thunk.md)(异步操作)
 * [CombineReducers](Docs/CombineReducers.md)
 * [ReduceReducers](Docs/ReduceReducers.md)
+* [Scheduled Dispatch](Docs/Scheduled.md)
 
 
 ## TODO
 
-* Scheduled Dispatch
 * [ReSwift-Router](https://github.com/ReSwift/ReSwift-Router)
 * [ReSwift-Recorder](https://github.com/ReSwift/ReSwift-Recorder)
 
