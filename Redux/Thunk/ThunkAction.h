@@ -10,9 +10,9 @@
 #import "Middleware.h"
 
 
-typedef void (^ThunkBody)(DispatchFunction dispatch, GetState getState) ;
-
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^ThunkBody)(DispatchFunction dispatch, GetState getState);
 
 @interface ThunkAction<__covariant StateType> : NSObject<Action>
 

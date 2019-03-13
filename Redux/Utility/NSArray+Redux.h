@@ -9,25 +9,25 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef id (^ReduxArrayMapOperator)(id object);
-typedef NSArray* (^ReduxArrayMap)(ReduxArrayMapOperator mapOperator);
+typedef id _Nonnull (^ReduxArrayMapOperator)(id object);
+typedef NSArray * _Nonnull (^ReduxArrayMap)(ReduxArrayMapOperator mapOperator);
 
 typedef BOOL (^ReduxArrayFilterOperator)(id object);
-typedef NSArray* (^ReduxArrayFilter)(ReduxArrayFilterOperator filterOperator);
+typedef NSArray * _Nonnull (^ReduxArrayFilter)(ReduxArrayFilterOperator filterOperator);
 
-typedef id (^ReduxArrayReduceOperator)(id result, id object);
-typedef id (^ReduxArrayReduce) (id _Nullable initialValue, ReduxArrayReduceOperator reduceOperator);
+typedef id _Nonnull (^ReduxArrayReduceOperator)(id result, id object);
+typedef id _Nonnull (^ReduxArrayReduce) (id _Nullable initialValue, ReduxArrayReduceOperator reduceOperator);
 
-typedef NSString*(^ReduxArrayJoin)(NSString *sep);
+typedef NSString * _Nonnull (^ReduxArrayJoin)(NSString *sep);
 
 typedef void (^ReduxArrayForeachOperator)(id object, NSInteger index);
 typedef void (^ReduxArrayForeach)(ReduxArrayForeachOperator foreachOperator);
 
-typedef NSArray* (^ReduxArrayFlatmapOperator)(id object);
-typedef NSArray* (^ReduxArrayFlatmap) (ReduxArrayFlatmapOperator reduceOperator);
+typedef NSArray * _Nonnull (^ReduxArrayFlatmapOperator)(id object);
+typedef NSArray * _Nonnull (^ReduxArrayFlatmap) (ReduxArrayFlatmapOperator reduceOperator);
 
 
-typedef NSArray* (^ReduxArrayApply) (NSArray<ReduxArrayMapOperator> *mapOperators);
+typedef NSArray * _Nonnull (^ReduxArrayApply) (NSArray<ReduxArrayMapOperator> *mapOperators);
 
 @interface NSArray (Redux)
 
