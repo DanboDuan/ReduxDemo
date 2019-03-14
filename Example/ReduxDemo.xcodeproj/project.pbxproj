@@ -728,6 +728,7 @@
 			baseConfigurationReference = 12274FD0B56ECBE240D01777 /* Pods-ReduxDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA524KP7L9;
 				INFOPLIST_FILE = ReduxDemo/Info.plist;
@@ -735,8 +736,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com..demo.ReduxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -746,6 +748,7 @@
 			baseConfigurationReference = EF94E2499087D65EAD09A3F4 /* Pods-ReduxDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UA524KP7L9;
 				INFOPLIST_FILE = ReduxDemo/Info.plist;
@@ -753,8 +756,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.danbo.demo.ReduxDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com..demo.ReduxDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
