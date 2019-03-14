@@ -32,7 +32,11 @@
 ## 使用
 
 * 直接copy代码，并用你的项目前缀重命名文件、类和协议。
+* pod
 
+```Ruby
+pod 'Redux',:git => 'https://github.com/DanboDuan/ReduxDemo.git',:branch => 'master',:tag => '1.0.0'
+```
 ### Tip
 
 1. 请参考Demo
