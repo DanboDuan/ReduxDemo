@@ -40,9 +40,9 @@ pod 'Redux',:git => 'https://github.com/DanboDuan/ReduxDemo.git',:branch => 'mas
 ### Tip
 
 1. 请参考Demo
-* 异步操作参照[Thunk](Docs/Thunk.md)
-* [CombineReducers](Docs/CombineReducers.md)
-* [ReduceReducers](Docs/ReduceReducers.md)
+2. 异步操作参照[Thunk](Docs/Thunk.md)
+3. [CombineReducers](Docs/CombineReducers.md)
+4. [ReduceReducers](Docs/ReduceReducers.md)
 
 ## 核心概念
 
