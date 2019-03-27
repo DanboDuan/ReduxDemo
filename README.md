@@ -35,7 +35,7 @@
 * pod
 
 ```Ruby
-pod 'Redux',:git => 'https://github.com/DanboDuan/ReduxDemo.git',:branch => 'master',:tag => '1.0.0'
+pod 'Redux',:git => 'https://github.com/DanboDuan/ReduxDemo.git',:branch => 'master',:tag => '1.3.0'
 ```
 ### Tip
 
