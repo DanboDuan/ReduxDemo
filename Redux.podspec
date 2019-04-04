@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint BDAutoTracker.podspec' to ensure this is a
+# Be sure to run `pod lib lint Redux.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'Redux'
 
   s.homepage         = 'https://github.com/DanboDuan/ReduxDemo'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
