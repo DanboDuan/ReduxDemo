@@ -11,11 +11,11 @@
 #import "Middleware.h"
 #import "Subscription.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol Action;
 @protocol State;
 @protocol Subscriber;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @protocol Store <NSObject>
 

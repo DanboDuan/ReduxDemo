@@ -7,10 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol Action <NSObject>
 @end
 
 @interface InitAction : NSObject <Action>
 @end
 
+NS_ASSUME_NONNULL_END
 

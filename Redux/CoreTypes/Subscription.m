@@ -7,6 +7,11 @@
 
 #import "Subscription.h"
 
+typedef void (^ObserverBlock)(id oldState, id updatedState);
+typedef void (^SinkBlock)(ObserverBlock observer);
+typedef BOOL (^StateCompareBlock)(id oldState, id updatedState);
+typedef id (^StateTransFormBlock)(id state);
+
 @interface Subscription<__covariant StateType> ()
 
 @end
@@ -17,10 +22,10 @@
     return [super init];
 }
 
-- (instancetype)initWithSink:(void (^)(void (^)(id, id)))sink {
-    self = [super init];
+- (instancetype)initWithSink:(SinkBlock)sink {
+    self = [self init];
     if (self) {
-        void (^block)(id, id) = ^(id oldState, id updatedState){
+        ObserverBlock block = ^(id oldState, id updatedState){
             [self updateValues:oldState with:updatedState];
         };
         sink(block);
@@ -33,26 +38,27 @@
     self.observer(oldState, updatedState);
 }
 
-- (instancetype)select:(id (^)(id))selector {
-
-    void (^sink)(void (^block)(id, id)) =  ^(void (^block)(id, id)){
+/// not a init method
+- (instancetype)select:(StateTransFormBlock)selector {
+    SinkBlock sink =  ^(ObserverBlock observer){
         self.observer = ^(id oldState, id updatedState) {
-            block(selector(oldState), selector(updatedState));
+            observer(selector(oldState), selector(updatedState));
         };
     };
 
     return [[[self class] alloc] initWithSink:sink];
 }
 
-- (instancetype)skipRepeats:(BOOL (^)(id, id))isRepeat {
-    void (^sink)(void (^block)(id, id)) =^(void (^block)(id, id)) {
+/// not a init method
+- (instancetype)skipRepeats:(StateCompareBlock)isRepeat {
+    SinkBlock sink =^(ObserverBlock observer) {
         self.observer = ^(id oldState, id updatedState) {
             if (oldState && updatedState) {
                 if (!isRepeat(oldState, updatedState)) {
-                    block(oldState, updatedState);
+                    observer(oldState, updatedState);
                 }
             } else {
-                block(oldState, updatedState);
+                observer(oldState, updatedState);
             }
         };
     };
@@ -60,13 +66,13 @@
     return [[[self class] alloc] initWithSink:sink];
 }
 
-- (instancetype)skip:(BOOL (^)(id, id))when {
-    
+/// not a init method
+- (instancetype)skip:(StateCompareBlock)when {
     return [self skipRepeats:when];
 }
 
-- (instancetype)only:(BOOL (^)(id, id))when {
-
+/// not a init method
+- (instancetype)only:(StateCompareBlock)when {
     return [self skipRepeats:^BOOL(id oldState, id updatedState) {
         return !when(oldState, updatedState);
     }];

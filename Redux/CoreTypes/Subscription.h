@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)updateValues:(nullable StateType)oldState with:(nullable StateType)updatedState;
 
+/// not a init method
 - (instancetype)skipRepeats:(BOOL (^)(StateType oldState, StateType updatedState))isRepeat;
 - (instancetype)skip:(BOOL (^)(StateType oldState, StateType updatedState))when;
 - (instancetype)only:(BOOL (^)(StateType oldState, StateType updatedState))when;

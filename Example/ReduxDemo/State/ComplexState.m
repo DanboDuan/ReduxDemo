@@ -30,7 +30,6 @@
 }
 
 - (BOOL)isEqualToState:(id<State>)object {
-
     if ([object isKindOfClass:[ComplexState class]]) {
         ComplexState *state = (ComplexState *)object;
         if ([self.counterState respondsToSelector:@selector(isEqualToState:)]) {

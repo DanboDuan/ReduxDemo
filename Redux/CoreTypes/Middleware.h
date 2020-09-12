@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol Action;
 @protocol State;
 
@@ -25,3 +27,5 @@ typedef DispatchFunctionChain (^Middleware)(DispatchFunction dispatch, GetState 
         };                                                                  \
     };                                                                      \
 };
+
+NS_ASSUME_NONNULL_END
